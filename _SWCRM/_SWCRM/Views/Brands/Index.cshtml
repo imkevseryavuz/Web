@@ -1,0 +1,65 @@
+﻿@model IEnumerable<_SWCRM.Models.Brand>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_DashboardCrm.cshtml";
+}
+
+<div class="pageheader">
+    <h3><i class="fa fa-list"></i> Markalar</h3>
+</div>
+<div class="contentpanel">
+    <div class="row">
+        <div class="col-sm-12 col-md-9 col-lg-10">
+            <div class="panel panel-default">
+                <div class="panel-heading pt10 pb5">
+                    <div class="row">
+                        <button type="button" class="btn btn-success btn-sm pull-right"><i class="glyphicon glyphicon-plus"></i> @Html.ActionLink("Marka Ekle", "BrandCreate", null, new { @style = "color:white" }) </button>
+                    </div>
+                </div>
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Situation.Status)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Situation.Status)
+                            </td>
+                            <td>
+
+                                <span class="label label-success">   <i class="fa fa-pencil"></i> @Html.ActionLink("Edit", "Edit", new { id = item.BrandId }, new { @style = "color:white" })</span> &nbsp;&nbsp;
+                                <span class="label label-danger">    <i class="fa fa-trash-o"></i> @Html.ActionLink("Delete", "Delete", new { id = item.BrandId }, new { @style = "color:white" })</span>
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-3 col-lg-2">
+            <div class="panel">
+                <div class="panel-body">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.TextBox("aranacakKelime")
+
+                        <div class="mb20"></div>
+                        <input type="submit" class="btn btn-primary btn-sm " value="Filtrele" />
+                        <input type="reset" class="btn btn-danger btn-sm " value="Sıfırla" />
+                    }
+                </div><!-- panel-body -->
+            </div><!-- panel -->
+        </div>
+    </div>
+</div>

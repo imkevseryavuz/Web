@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="551af8a50b1347dc98df8ea731315542" Name="Diagram1">
+        <EntityTypeShape EntityType="SWCRMModel.Agenda" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.AgendaStatu" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.AgendaType" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.Brand" Width="1.5" PointX="6" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.Category" Width="1.5" PointX="6" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.Contact" Width="1.5" PointX="6" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.Currency" Width="1.5" PointX="6" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.Deal" Width="1.5" PointX="8.25" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.DealStatu" Width="1.5" PointX="6" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.Department" Width="1.5" PointX="3.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.Employee" Width="1.5" PointX="6" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.Employer" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.Gender" Width="1.5" PointX="3.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.GeneralSetting" Width="1.5" PointX="8.25" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.ImportanceLevel" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.NumberOfEmployee" Width="1.5" PointX="3.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.Product" Width="1.5" PointX="8.25" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.RecordType" Width="1.5" PointX="3.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.Result" Width="1.5" PointX="0.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.Sale" Width="1.5" PointX="11.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.Sector" Width="1.5" PointX="3.75" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.SingUp" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.Situation" Width="1.5" PointX="3.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.Task" Width="1.5" PointX="8.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWCRMModel.WorkingSituation" Width="1.5" PointX="3.75" PointY="27.75" IsExpanded="true" />
+        <AssociationConnector Association="SWCRMModel.Fk_Agendas_AgendaStatusId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Agendas_AgendaTypeId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Agendas_ContactId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Agendas_ImportanceId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Agendas_ResultId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Agendas_SingUpId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Tasks_AgendaStatusId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Tasks_AgendaTypeId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Brands_StatusId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Products_BrandId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Categories_StatusId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Products_CategoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Contacts_GenderId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Contacts_NumberOfEmployeesId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Contacts_RecordTypeId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Contacts_SectorId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Contacts_SingUpId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Deals_ContactId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_GeneralSettings_ContactId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Sales_ContactId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Tasks_ContactId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Deals_CurrencyId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Employees_CurrencyId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Products_CurrencyId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Sales_CurrencyId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Deals_DealStatusId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Deals_EmployeeId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Employees_DepartmentId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Employees_GenderId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Employees_StatusId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Employees_WorkingStatusId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Tasks_ImportanceLevels" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Products_StatusId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Tasks_ResultId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Sales_SingUpId" ManuallyRouted="false" />
+        <AssociationConnector Association="SWCRMModel.Fk_Tasks_SingUpId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

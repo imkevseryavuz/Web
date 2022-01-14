@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SWCRMModelStoreContainer" CdmEntityContainer="SWCRMEntities">
+    <EntitySetMapping Name="Agendas">
+      <EntityTypeMapping TypeName="SWCRMModel.Agenda">
+        <MappingFragment StoreEntitySet="Agendas">
+          <ScalarProperty Name="AgendaId" ColumnName="AgendaId" />
+          <ScalarProperty Name="Descriptionn" ColumnName="Descriptionn" />
+          <ScalarProperty Name="AgendaTypeId" ColumnName="AgendaTypeId" />
+          <ScalarProperty Name="AgendaStatusId" ColumnName="AgendaStatusId" />
+          <ScalarProperty Name="ImportanceId" ColumnName="ImportanceId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="FinishDate" ColumnName="FinishDate" />
+          <ScalarProperty Name="FinisTime" ColumnName="FinisTime" />
+          <ScalarProperty Name="SingUpId" ColumnName="SingUpId" />
+          <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+          <ScalarProperty Name="ResultId" ColumnName="ResultId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AgendaStatus">
+      <EntityTypeMapping TypeName="SWCRMModel.AgendaStatu">
+        <MappingFragment StoreEntitySet="AgendaStatus">
+          <ScalarProperty Name="AgendaStatusId" ColumnName="AgendaStatusId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AgendaTypes">
+      <EntityTypeMapping TypeName="SWCRMModel.AgendaType">
+        <MappingFragment StoreEntitySet="AgendaTypes">
+          <ScalarProperty Name="AgendaTypeId" ColumnName="AgendaTypeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Brands">
+      <EntityTypeMapping TypeName="SWCRMModel.Brand">
+        <MappingFragment StoreEntitySet="Brands">
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="SWCRMModel.Category">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="SWCRMModel.Contact">
+        <MappingFragment StoreEntitySet="Contacts">
+          <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+          <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="RecordTypeId" ColumnName="RecordTypeId" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="NumberOfEmployeesId" ColumnName="NumberOfEmployeesId" />
+          <ScalarProperty Name="SectorId" ColumnName="SectorId" />
+          <ScalarProperty Name="SingUpId" ColumnName="SingUpId" />
+          <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Currencies">
+      <EntityTypeMapping TypeName="SWCRMModel.Currency">
+        <MappingFragment StoreEntitySet="Currencies">
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Deals">
+      <EntityTypeMapping TypeName="SWCRMModel.Deal">
+        <MappingFragment StoreEntitySet="Deals">
+          <ScalarProperty Name="DealId" ColumnName="DealId" />
+          <ScalarProperty Name="DealName" ColumnName="DealName" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="FinishDate" ColumnName="FinishDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="DealStatusId" ColumnName="DealStatusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DealStatus">
+      <EntityTypeMapping TypeName="SWCRMModel.DealStatu">
+        <MappingFragment StoreEntitySet="DealStatus">
+          <ScalarProperty Name="DealStatusId" ColumnName="DealStatusId" />
+          <ScalarProperty Name="DealStatusName" ColumnName="DealStatusName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="SWCRMModel.Department">
+        <MappingFragment StoreEntitySet="Departments">
+          <ScalarProperty Name="DepartmanId" ColumnName="DepartmanId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="SWCRMModel.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="WorkingStatus" ColumnName="WorkingStatus" />
+          <ScalarProperty Name="DateOfEmployment" ColumnName="DateOfEmployment" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+          <ScalarProperty Name="WorkingStatusId" ColumnName="WorkingStatusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genders">
+      <EntityTypeMapping TypeName="SWCRMModel.Gender">
+        <MappingFragment StoreEntitySet="Genders">
+          <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+          <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeneralSettings">
+      <EntityTypeMapping TypeName="SWCRMModel.GeneralSetting">
+        <MappingFragment StoreEntitySet="GeneralSettings">
+          <ScalarProperty Name="GeneralSettingId" ColumnName="GeneralSettingId" />
+          <ScalarProperty Name="ContactLogo" ColumnName="ContactLogo" />
+          <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImportanceLevels">
+      <EntityTypeMapping TypeName="SWCRMModel.ImportanceLevel">
+        <MappingFragment StoreEntitySet="ImportanceLevels">
+          <ScalarProperty Name="ImportanceId" ColumnName="ImportanceId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NumberOfEmployees">
+      <EntityTypeMapping TypeName="SWCRMModel.NumberOfEmployee">
+        <MappingFragment StoreEntitySet="NumberOfEmployees">
+          <ScalarProperty Name="NumberOfEmployeeId" ColumnName="NumberOfEmployeeId" />
+          <ScalarProperty Name="NumberOfEmployeeName" ColumnName="NumberOfEmployeeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="SWCRMModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecordTypes">
+      <EntityTypeMapping TypeName="SWCRMModel.RecordType">
+        <MappingFragment StoreEntitySet="RecordTypes">
+          <ScalarProperty Name="RecordTypeId" ColumnName="RecordTypeId" />
+          <ScalarProperty Name="RecordTypeName" ColumnName="RecordTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Results">
+      <EntityTypeMapping TypeName="SWCRMModel.Result">
+        <MappingFragment StoreEntitySet="Results">
+          <ScalarProperty Name="ResultId" ColumnName="ResultId" />
+          <ScalarProperty Name="ResultName" ColumnName="ResultName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sales">
+      <EntityTypeMapping TypeName="SWCRMModel.Sale">
+        <MappingFragment StoreEntitySet="Sales">
+          <ScalarProperty Name="SalesId" ColumnName="SalesId" />
+          <ScalarProperty Name="SalesName" ColumnName="SalesName" />
+          <ScalarProperty Name="SalesDate" ColumnName="SalesDate" />
+          <ScalarProperty Name="SalesType" ColumnName="SalesType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+          <ScalarProperty Name="SingUpId" ColumnName="SingUpId" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sectors">
+      <EntityTypeMapping TypeName="SWCRMModel.Sector">
+        <MappingFragment StoreEntitySet="Sectors">
+          <ScalarProperty Name="SectorId" ColumnName="SectorId" />
+          <ScalarProperty Name="SectorsName" ColumnName="SectorsName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SingUps">
+      <EntityTypeMapping TypeName="SWCRMModel.SingUp">
+        <MappingFragment StoreEntitySet="SingUp">
+          <ScalarProperty Name="SingUpId" ColumnName="SingUpId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordAgain" ColumnName="PasswordAgain" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Situations">
+      <EntityTypeMapping TypeName="SWCRMModel.Situation">
+        <MappingFragment StoreEntitySet="Situations">
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tasks">
+      <EntityTypeMapping TypeName="SWCRMModel.Task">
+        <MappingFragment StoreEntitySet="Tasks">
+          <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+          <ScalarProperty Name="Descriptioon" ColumnName="Descriptioon" />
+          <ScalarProperty Name="AgendaTypeId" ColumnName="AgendaTypeId" />
+          <ScalarProperty Name="AgendaStatusId" ColumnName="AgendaStatusId" />
+          <ScalarProperty Name="ImportanceId" ColumnName="ImportanceId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="FinishDate" ColumnName="FinishDate" />
+          <ScalarProperty Name="FinisTime" ColumnName="FinisTime" />
+          <ScalarProperty Name="SingUpId" ColumnName="SingUpId" />
+          <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+          <ScalarProperty Name="ResultId" ColumnName="ResultId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkingSituations">
+      <EntityTypeMapping TypeName="SWCRMModel.WorkingSituation">
+        <MappingFragment StoreEntitySet="WorkingSituations">
+          <ScalarProperty Name="WorkingStatusId" ColumnName="WorkingStatusId" />
+          <ScalarProperty Name="WorkingStatus" ColumnName="WorkingStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

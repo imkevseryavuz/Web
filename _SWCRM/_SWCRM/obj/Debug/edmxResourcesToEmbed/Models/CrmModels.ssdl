@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SWCRMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Agendas">
+    <Key>
+      <PropertyRef Name="AgendaId" />
+    </Key>
+    <Property Name="AgendaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descriptionn" Type="nvarchar(max)" />
+    <Property Name="AgendaTypeId" Type="int" />
+    <Property Name="AgendaStatusId" Type="int" />
+    <Property Name="ImportanceId" Type="int" />
+    <Property Name="StartDate" Type="nvarchar(max)" />
+    <Property Name="StartTime" Type="nvarchar(max)" />
+    <Property Name="FinishDate" Type="nvarchar(max)" />
+    <Property Name="FinisTime" Type="nvarchar(max)" />
+    <Property Name="SingUpId" Type="int" />
+    <Property Name="ContactId" Type="int" />
+    <Property Name="ResultId" Type="int" />
+  </EntityType>
+  <EntityType Name="AgendaStatus">
+    <Key>
+      <PropertyRef Name="AgendaStatusId" />
+    </Key>
+    <Property Name="AgendaStatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AgendaTypes">
+    <Key>
+      <PropertyRef Name="AgendaTypeId" />
+    </Key>
+    <Property Name="AgendaTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Brands">
+    <Key>
+      <PropertyRef Name="BrandId" />
+    </Key>
+    <Property Name="BrandId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Contacts">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Name="ContactId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameSurname" Type="nvarchar" MaxLength="100" />
+    <Property Name="CompanyName" Type="nvarchar(max)" />
+    <Property Name="Position" Type="nvarchar(max)" />
+    <Property Name="RecordTypeId" Type="int" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="11" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Address" Type="ntext" />
+    <Property Name="NumberOfEmployeesId" Type="int" />
+    <Property Name="SectorId" Type="int" />
+    <Property Name="SingUpId" Type="int" />
+    <Property Name="GenderId" Type="int" />
+  </EntityType>
+  <EntityType Name="Currencies">
+    <Key>
+      <PropertyRef Name="CurrencyId" />
+    </Key>
+    <Property Name="CurrencyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Deals">
+    <Key>
+      <PropertyRef Name="DealId" />
+    </Key>
+    <Property Name="DealId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DealName" Type="nvarchar(max)" />
+    <Property Name="StartDate" Type="nvarchar(max)" />
+    <Property Name="FinishDate" Type="nvarchar(max)" />
+    <Property Name="Price" Type="nvarchar(max)" />
+    <Property Name="Description" Type="ntext" />
+    <Property Name="ContactId" Type="int" />
+    <Property Name="EmployeeId" Type="int" />
+    <Property Name="CurrencyId" Type="int" />
+    <Property Name="DealStatusId" Type="int" />
+  </EntityType>
+  <EntityType Name="DealStatus">
+    <Key>
+      <PropertyRef Name="DealStatusId" />
+    </Key>
+    <Property Name="DealStatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DealStatusName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Departments">
+    <Key>
+      <PropertyRef Name="DepartmanId" />
+    </Key>
+    <Property Name="DepartmanId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameSurname" Type="nvarchar" MaxLength="100" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="30" />
+    <Property Name="Email" Type="nvarchar" MaxLength="30" />
+    <Property Name="Address" Type="ntext" />
+    <Property Name="DateOfBirth" Type="nvarchar" MaxLength="30" />
+    <Property Name="Position" Type="nvarchar" MaxLength="30" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="WorkingStatus" Type="nvarchar" MaxLength="30" />
+    <Property Name="DateOfEmployment" Type="nvarchar" MaxLength="30" />
+    <Property Name="Salary" Type="nvarchar" MaxLength="30" />
+    <Property Name="Status" Type="nvarchar" MaxLength="30" />
+    <Property Name="Password" Type="nvarchar" MaxLength="30" />
+    <Property Name="GenderId" Type="int" />
+    <Property Name="WorkingStatusId" Type="int" />
+  </EntityType>
+  <EntityType Name="Genders">
+    <Key>
+      <PropertyRef Name="GenderId" />
+    </Key>
+    <Property Name="GenderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GenderName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="GeneralSettings">
+    <Key>
+      <PropertyRef Name="GeneralSettingId" />
+    </Key>
+    <Property Name="GeneralSettingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContactLogo" Type="nvarchar(max)" />
+    <Property Name="ContactId" Type="int" />
+  </EntityType>
+  <EntityType Name="ImportanceLevels">
+    <Key>
+      <PropertyRef Name="ImportanceId" />
+    </Key>
+    <Property Name="ImportanceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NumberOfEmployees">
+    <Key>
+      <PropertyRef Name="NumberOfEmployeeId" />
+    </Key>
+    <Property Name="NumberOfEmployeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumberOfEmployeeName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar(max)" />
+    <Property Name="ProductPrice" Type="nvarchar(max)" />
+    <Property Name="StockQuantity" Type="nvarchar(max)" />
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="Description" Type="ntext" />
+    <Property Name="BrandId" Type="int" />
+    <Property Name="CategoryId" Type="int" />
+    <Property Name="CurrencyId" Type="int" />
+  </EntityType>
+  <EntityType Name="RecordTypes">
+    <Key>
+      <PropertyRef Name="RecordTypeId" />
+    </Key>
+    <Property Name="RecordTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RecordTypeName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Results">
+    <Key>
+      <PropertyRef Name="ResultId" />
+    </Key>
+    <Property Name="ResultId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ResultName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sales">
+    <Key>
+      <PropertyRef Name="SalesId" />
+    </Key>
+    <Property Name="SalesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SalesName" Type="nvarchar(max)" />
+    <Property Name="SalesDate" Type="nvarchar(max)" />
+    <Property Name="SalesType" Type="nvarchar(max)" />
+    <Property Name="Description" Type="ntext" />
+    <Property Name="Price" Type="money" />
+    <Property Name="ContactId" Type="int" />
+    <Property Name="SingUpId" Type="int" />
+    <Property Name="CurrencyId" Type="int" />
+  </EntityType>
+  <EntityType Name="Sectors">
+    <Key>
+      <PropertyRef Name="SectorId" />
+    </Key>
+    <Property Name="SectorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SectorsName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SingUp">
+    <Key>
+      <PropertyRef Name="SingUpId" />
+    </Key>
+    <Property Name="SingUpId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Surname" Type="nvarchar(max)" />
+    <Property Name="CompanyName" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="11" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="PasswordAgain" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Situations">
+    <Key>
+      <PropertyRef Name="StatusId" />
+    </Key>
+    <Property Name="StatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Tasks">
+    <Key>
+      <PropertyRef Name="TaskId" />
+    </Key>
+    <Property Name="TaskId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descriptioon" Type="nvarchar" MaxLength="200" />
+    <Property Name="AgendaTypeId" Type="int" />
+    <Property Name="AgendaStatusId" Type="int" />
+    <Property Name="ImportanceId" Type="int" />
+    <Property Name="StartDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="StartTime" Type="nvarchar" MaxLength="30" />
+    <Property Name="FinishDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="FinisTime" Type="nvarchar" MaxLength="30" />
+    <Property Name="SingUpId" Type="int" />
+    <Property Name="ContactId" Type="int" />
+    <Property Name="ResultId" Type="int" />
+  </EntityType>
+  <EntityType Name="WorkingSituations">
+    <Key>
+      <PropertyRef Name="WorkingStatusId" />
+    </Key>
+    <Property Name="WorkingStatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkingStatus" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="Fk_Agendas_AgendaStatusId">
+    <End Role="AgendaStatus" Type="Self.AgendaStatus" Multiplicity="0..1" />
+    <End Role="Agendas" Type="Self.Agendas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AgendaStatus">
+        <PropertyRef Name="AgendaStatusId" />
+      </Principal>
+      <Dependent Role="Agendas">
+        <PropertyRef Name="AgendaStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Agendas_AgendaTypeId">
+    <End Role="AgendaTypes" Type="Self.AgendaTypes" Multiplicity="0..1" />
+    <End Role="Agendas" Type="Self.Agendas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AgendaTypes">
+        <PropertyRef Name="AgendaTypeId" />
+      </Principal>
+      <Dependent Role="Agendas">
+        <PropertyRef Name="AgendaTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Agendas_ContactId">
+    <End Role="Contacts" Type="Self.Contacts" Multiplicity="0..1" />
+    <End Role="Agendas" Type="Self.Agendas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contacts">
+        <PropertyRef Name="ContactId" />
+      </Principal>
+      <Dependent Role="Agendas">
+        <PropertyRef Name="ContactId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Agendas_ImportanceId">
+    <End Role="ImportanceLevels" Type="Self.ImportanceLevels" Multiplicity="0..1" />
+    <End Role="Agendas" Type="Self.Agendas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ImportanceLevels">
+        <PropertyRef Name="ImportanceId" />
+      </Principal>
+      <Dependent Role="Agendas">
+        <PropertyRef Name="ImportanceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Agendas_ResultId">
+    <End Role="Results" Type="Self.Results" Multiplicity="0..1" />
+    <End Role="Agendas" Type="Self.Agendas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Results">
+        <PropertyRef Name="ResultId" />
+      </Principal>
+      <Dependent Role="Agendas">
+        <PropertyRef Name="ResultId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Agendas_SingUpId">
+    <End Role="SingUp" Type="Self.SingUp" Multiplicity="0..1" />
+    <End Role="Agendas" Type="Self.Agendas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SingUp">
+        <PropertyRef Name="SingUpId" />
+      </Principal>
+      <Dependent Role="Agendas">
+        <PropertyRef Name="SingUpId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Contacts_GenderId">
+    <End Role="Genders" Type="Self.Genders" Multiplicity="0..1" />
+    <End Role="Contacts" Type="Self.Contacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genders">
+        <PropertyRef Name="GenderId" />
+      </Principal>
+      <Dependent Role="Contacts">
+        <PropertyRef Name="GenderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Contacts_NumberOfEmployeesId">
+    <End Role="NumberOfEmployees" Type="Self.NumberOfEmployees" Multiplicity="0..1" />
+    <End Role="Contacts" Type="Self.Contacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NumberOfEmployees">
+        <PropertyRef Name="NumberOfEmployeeId" />
+      </Principal>
+      <Dependent Role="Contacts">
+        <PropertyRef Name="NumberOfEmployeesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Contacts_RecordTypeId">
+    <End Role="RecordTypes" Type="Self.RecordTypes" Multiplicity="0..1" />
+    <End Role="Contacts" Type="Self.Contacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RecordTypes">
+        <PropertyRef Name="RecordTypeId" />
+      </Principal>
+      <Dependent Role="Contacts">
+        <PropertyRef Name="RecordTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Contacts_SectorId">
+    <End Role="Sectors" Type="Self.Sectors" Multiplicity="0..1" />
+    <End Role="Contacts" Type="Self.Contacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sectors">
+        <PropertyRef Name="SectorId" />
+      </Principal>
+      <Dependent Role="Contacts">
+        <PropertyRef Name="SectorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Contacts_SingUpId">
+    <End Role="SingUp" Type="Self.SingUp" Multiplicity="0..1" />
+    <End Role="Contacts" Type="Self.Contacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SingUp">
+        <PropertyRef Name="SingUpId" />
+      </Principal>
+      <Dependent Role="Contacts">
+        <PropertyRef Name="SingUpId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Deals_ContactId">
+    <End Role="Contacts" Type="Self.Contacts" Multiplicity="0..1" />
+    <End Role="Deals" Type="Self.Deals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contacts">
+        <PropertyRef Name="ContactId" />
+      </Principal>
+      <Dependent Role="Deals">
+        <PropertyRef Name="ContactId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Deals_CurrencyId">
+    <End Role="Currencies" Type="Self.Currencies" Multiplicity="0..1" />
+    <End Role="Deals" Type="Self.Deals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currencies">
+        <PropertyRef Name="CurrencyId" />
+      </Principal>
+      <Dependent Role="Deals">
+        <PropertyRef Name="CurrencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Deals_DealStatusId">
+    <End Role="DealStatus" Type="Self.DealStatus" Multiplicity="0..1" />
+    <End Role="Deals" Type="Self.Deals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DealStatus">
+        <PropertyRef Name="DealStatusId" />
+      </Principal>
+      <Dependent Role="Deals">
+        <PropertyRef Name="DealStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Deals_EmployeeId">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+    <End Role="Deals" Type="Self.Deals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="Deals">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Employees_DepartmentId">
+    <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="DepartmanId" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Employees_GenderId">
+    <End Role="Genders" Type="Self.Genders" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genders">
+        <PropertyRef Name="GenderId" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="GenderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Employees_WorkingStatusId">
+    <End Role="WorkingSituations" Type="Self.WorkingSituations" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorkingSituations">
+        <PropertyRef Name="WorkingStatusId" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="WorkingStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_GeneralSettings_ContactId">
+    <End Role="Contacts" Type="Self.Contacts" Multiplicity="0..1" />
+    <End Role="GeneralSettings" Type="Self.GeneralSettings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contacts">
+        <PropertyRef Name="ContactId" />
+      </Principal>
+      <Dependent Role="GeneralSettings">
+        <PropertyRef Name="ContactId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Products_BrandId">
+    <End Role="Brands" Type="Self.Brands" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brands">
+        <PropertyRef Name="BrandId" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="BrandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Products_CategoryId">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Products_CurrencyId">
+    <End Role="Currencies" Type="Self.Currencies" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currencies">
+        <PropertyRef Name="CurrencyId" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CurrencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Sales_ContactId">
+    <End Role="Contacts" Type="Self.Contacts" Multiplicity="0..1" />
+    <End Role="Sales" Type="Self.Sales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contacts">
+        <PropertyRef Name="ContactId" />
+      </Principal>
+      <Dependent Role="Sales">
+        <PropertyRef Name="ContactId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Sales_CurrencyId">
+    <End Role="Currencies" Type="Self.Currencies" Multiplicity="0..1" />
+    <End Role="Sales" Type="Self.Sales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currencies">
+        <PropertyRef Name="CurrencyId" />
+      </Principal>
+      <Dependent Role="Sales">
+        <PropertyRef Name="CurrencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Sales_SingUpId">
+    <End Role="SingUp" Type="Self.SingUp" Multiplicity="0..1" />
+    <End Role="Sales" Type="Self.Sales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SingUp">
+        <PropertyRef Name="SingUpId" />
+      </Principal>
+      <Dependent Role="Sales">
+        <PropertyRef Name="SingUpId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Tasks_AgendaStatusId">
+    <End Role="AgendaStatus" Type="Self.AgendaStatus" Multiplicity="0..1" />
+    <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AgendaStatus">
+        <PropertyRef Name="AgendaStatusId" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="AgendaStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Tasks_AgendaTypeId">
+    <End Role="AgendaTypes" Type="Self.AgendaTypes" Multiplicity="0..1" />
+    <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AgendaTypes">
+        <PropertyRef Name="AgendaTypeId" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="AgendaTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Tasks_ContactId">
+    <End Role="Contacts" Type="Self.Contacts" Multiplicity="0..1" />
+    <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contacts">
+        <PropertyRef Name="ContactId" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="ContactId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Tasks_ImportanceLevels">
+    <End Role="ImportanceLevels" Type="Self.ImportanceLevels" Multiplicity="0..1" />
+    <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ImportanceLevels">
+        <PropertyRef Name="ImportanceId" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="ImportanceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Tasks_ResultId">
+    <End Role="Results" Type="Self.Results" Multiplicity="0..1" />
+    <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Results">
+        <PropertyRef Name="ResultId" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="ResultId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Tasks_SingUpId">
+    <End Role="SingUp" Type="Self.SingUp" Multiplicity="0..1" />
+    <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SingUp">
+        <PropertyRef Name="SingUpId" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="SingUpId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SWCRMModelStoreContainer">
+    <EntitySet Name="Agendas" EntityType="Self.Agendas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AgendaStatus" EntityType="Self.AgendaStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AgendaTypes" EntityType="Self.AgendaTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Brands" EntityType="Self.Brands" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contacts" EntityType="Self.Contacts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Currencies" EntityType="Self.Currencies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Deals" EntityType="Self.Deals" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DealStatus" EntityType="Self.DealStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Departments" EntityType="Self.Departments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Genders" EntityType="Self.Genders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GeneralSettings" EntityType="Self.GeneralSettings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ImportanceLevels" EntityType="Self.ImportanceLevels" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NumberOfEmployees" EntityType="Self.NumberOfEmployees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RecordTypes" EntityType="Self.RecordTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Results" EntityType="Self.Results" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sales" EntityType="Self.Sales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sectors" EntityType="Self.Sectors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SingUp" EntityType="Self.SingUp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Situations" EntityType="Self.Situations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tasks" EntityType="Self.Tasks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkingSituations" EntityType="Self.WorkingSituations" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Fk_Agendas_AgendaStatusId" Association="Self.Fk_Agendas_AgendaStatusId">
+      <End Role="AgendaStatus" EntitySet="AgendaStatus" />
+      <End Role="Agendas" EntitySet="Agendas" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Agendas_AgendaTypeId" Association="Self.Fk_Agendas_AgendaTypeId">
+      <End Role="AgendaTypes" EntitySet="AgendaTypes" />
+      <End Role="Agendas" EntitySet="Agendas" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Agendas_ContactId" Association="Self.Fk_Agendas_ContactId">
+      <End Role="Contacts" EntitySet="Contacts" />
+      <End Role="Agendas" EntitySet="Agendas" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Agendas_ImportanceId" Association="Self.Fk_Agendas_ImportanceId">
+      <End Role="ImportanceLevels" EntitySet="ImportanceLevels" />
+      <End Role="Agendas" EntitySet="Agendas" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Agendas_ResultId" Association="Self.Fk_Agendas_ResultId">
+      <End Role="Results" EntitySet="Results" />
+      <End Role="Agendas" EntitySet="Agendas" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Agendas_SingUpId" Association="Self.Fk_Agendas_SingUpId">
+      <End Role="SingUp" EntitySet="SingUp" />
+      <End Role="Agendas" EntitySet="Agendas" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Contacts_GenderId" Association="Self.Fk_Contacts_GenderId">
+      <End Role="Genders" EntitySet="Genders" />
+      <End Role="Contacts" EntitySet="Contacts" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Contacts_NumberOfEmployeesId" Association="Self.Fk_Contacts_NumberOfEmployeesId">
+      <End Role="NumberOfEmployees" EntitySet="NumberOfEmployees" />
+      <End Role="Contacts" EntitySet="Contacts" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Contacts_RecordTypeId" Association="Self.Fk_Contacts_RecordTypeId">
+      <End Role="RecordTypes" EntitySet="RecordTypes" />
+      <End Role="Contacts" EntitySet="Contacts" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Contacts_SectorId" Association="Self.Fk_Contacts_SectorId">
+      <End Role="Sectors" EntitySet="Sectors" />
+      <End Role="Contacts" EntitySet="Contacts" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Contacts_SingUpId" Association="Self.Fk_Contacts_SingUpId">
+      <End Role="SingUp" EntitySet="SingUp" />
+      <End Role="Contacts" EntitySet="Contacts" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Deals_ContactId" Association="Self.Fk_Deals_ContactId">
+      <End Role="Contacts" EntitySet="Contacts" />
+      <End Role="Deals" EntitySet="Deals" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Deals_CurrencyId" Association="Self.Fk_Deals_CurrencyId">
+      <End Role="Currencies" EntitySet="Currencies" />
+      <End Role="Deals" EntitySet="Deals" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Deals_DealStatusId" Association="Self.Fk_Deals_DealStatusId">
+      <End Role="DealStatus" EntitySet="DealStatus" />
+      <End Role="Deals" EntitySet="Deals" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Deals_EmployeeId" Association="Self.Fk_Deals_EmployeeId">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Deals" EntitySet="Deals" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Employees_DepartmentId" Association="Self.Fk_Employees_DepartmentId">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Employees_GenderId" Association="Self.Fk_Employees_GenderId">
+      <End Role="Genders" EntitySet="Genders" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Employees_WorkingStatusId" Association="Self.Fk_Employees_WorkingStatusId">
+      <End Role="WorkingSituations" EntitySet="WorkingSituations" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_GeneralSettings_ContactId" Association="Self.Fk_GeneralSettings_ContactId">
+      <End Role="Contacts" EntitySet="Contacts" />
+      <End Role="GeneralSettings" EntitySet="GeneralSettings" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Products_BrandId" Association="Self.Fk_Products_BrandId">
+      <End Role="Brands" EntitySet="Brands" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Products_CategoryId" Association="Self.Fk_Products_CategoryId">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Products_CurrencyId" Association="Self.Fk_Products_CurrencyId">
+      <End Role="Currencies" EntitySet="Currencies" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Sales_ContactId" Association="Self.Fk_Sales_ContactId">
+      <End Role="Contacts" EntitySet="Contacts" />
+      <End Role="Sales" EntitySet="Sales" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Sales_CurrencyId" Association="Self.Fk_Sales_CurrencyId">
+      <End Role="Currencies" EntitySet="Currencies" />
+      <End Role="Sales" EntitySet="Sales" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Sales_SingUpId" Association="Self.Fk_Sales_SingUpId">
+      <End Role="SingUp" EntitySet="SingUp" />
+      <End Role="Sales" EntitySet="Sales" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Tasks_AgendaStatusId" Association="Self.Fk_Tasks_AgendaStatusId">
+      <End Role="AgendaStatus" EntitySet="AgendaStatus" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Tasks_AgendaTypeId" Association="Self.Fk_Tasks_AgendaTypeId">
+      <End Role="AgendaTypes" EntitySet="AgendaTypes" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Tasks_ContactId" Association="Self.Fk_Tasks_ContactId">
+      <End Role="Contacts" EntitySet="Contacts" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Tasks_ImportanceLevels" Association="Self.Fk_Tasks_ImportanceLevels">
+      <End Role="ImportanceLevels" EntitySet="ImportanceLevels" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Tasks_ResultId" Association="Self.Fk_Tasks_ResultId">
+      <End Role="Results" EntitySet="Results" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Tasks_SingUpId" Association="Self.Fk_Tasks_SingUpId">
+      <End Role="SingUp" EntitySet="SingUp" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

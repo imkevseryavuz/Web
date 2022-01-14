@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "ContactUs";
+    Layout = "~/Views/Shared/_MainCrm.cshtml";
+}
+
+
+<section id="pagetitle-container">
+    <div class="row">
+        <div class="twelve column">
+            <h2>Bize Ulaşın | İletişim</h2>
+            <h4> Tüm soru, görüş ve talepleriniz için bizimle iletişime geçebilirsiniz. </h4>
+        </div>
+        <div class="twelve column breadcrumb">
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li class="current-page"><a href="iletisim">İletişim	</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- /.baslik -->
+<!-- içerik-->
+<section class="content-wrapper">
+    <div class="row">
+        <div class="four column">
+            <h6 class="title-line margin-bottom2"><span>SWCRM | 2016</span></h6>
+            <ul class="no-bullet list-line-contact">
+                <li>
+                    <div class="flatborder left">
+                        <i class="resim-saat small"></i>
+                    </div>
+                    <h6>Çalışma Saatlerimiz</h6>
+                    <p class="text-overflow">Hafta içi / 09:00 - 18:00<br />Haftasonu / 10:00 - 13:00</p>
+                </li>
+
+                <li>
+                    <div class="flatborder left">
+                        <i class="resim-harita small"></i>
+                    </div>
+                    <h6>Adres</h6>
+                    <p class="text-overflow">İstanbul</p>
+                    <br>
+                </li>
+
+                <li>
+                    <div class="flatborder left">
+                        <i class="resim-tel small"></i>
+                    </div>
+                    <h6>Telefon &amp; Mail</h6>
+                    <p class="text-overflow">Telefon : 0505 555 55 55<p>Mail : swcrm@gmail.com</p>
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="eight column">
+            <p class="lead" style="color:#666">İletişim Formu</p>
+
+
+            <div id="contact-form-area">
+                <!-- İletişim Formu Session Yoksa-->
+                <form name="iletisim_formu" method="POST" id="contactform">
+                    <fieldset>
+                        <label style="width:65px">Adınız <em>*</em></label>
+                        <input name="adi" type="text" autofocus required id="adi" style="text-transform:capitalize" value="" maxlength="30" />
+                        <label style="width:65px">E-Posta <em>*</em></label>
+                        <input name="eposta" type="email" id="eposta" style="color:#444" required maxlength="40" />
+
+                        <label style="width:65px">Konu <em>*</em></label>
+                        <input name="konu" type="text" id="subject" style="text-transform:capitalize" value="" maxlength="75" required />
+                        <label style="width:65px">Mesajınız <em>*</em></label>
+                        <textarea style="color:#444; width:350px" name="mesaj" id="message" cols="2" rows="6" required></textarea>
+                        <label style="width:65px">Güvenlik<em>*</em></label>
+                        <input type="text" name="kontrol" required placeholder="Lütfen Güvenlik Kodunu Giriniz" maxlength="6">
+
+                        <div class="clear"></div>
+                        <label style="width:415px ; min-width:260px">
+
+                            <button style="float:right" type="submit" name="gonder" class="btn btn-success" id="buttonsend">Gönder</button>
+                            <div class="clear"></div>
+                    </fieldset>
+                    <input type="hidden" name="gonderen_ip" value="81.214.129.183">
+                    <input type="hidden" name="MM_insert" value="iletisim_formu">
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,107 @@
+﻿@model _SWCRM.Models.Contact
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_DashboardCrm.cshtml";
+}
+
+        <h4>Contact</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.NameSurname)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NameSurname)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CompanyName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CompanyName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Position)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Position)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Phone)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Phone)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Gender.GenderName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Gender.GenderName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.NumberOfEmployee.NumberOfEmployeeName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NumberOfEmployee.NumberOfEmployeeName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.RecordType.RecordTypeName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.RecordType.RecordTypeName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Sector.SectorsName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Sector.SectorsName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.SingUp.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.SingUp.Name)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }

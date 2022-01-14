@@ -1,0 +1,98 @@
+﻿@model IEnumerable<_SWCRM.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_DashboardCrm.cshtml";
+}
+
+<div class="pageheader">
+ 
+    <h3><i class="fa fa-male"></i> Personeller</h3>
+</div>
+
+<div class="contentpanel">
+    <div class="row">
+        <div class="col-sm-12 col-md-9 col-lg-10">
+            <div class="panel panel-default">
+                <div class="panel-heading pt10 pb5">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="panel-title mt10 ng-scope"><a href="/Login/EmployerLogin/"><i class="fa fa-sign-out"></i> Exit</a></h4>
+                            
+
+                        </div>
+                        <button type="button" class="btn btn-success btn-sm pull-right"><i class="glyphicon glyphicon-plus"></i> @Html.ActionLink("Personel Ekle", "EmployeeCreate", null, new { @style = "color:white" }) </button>
+                    </div>
+                </div>
+                <table class="table table-responsive">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.NameSurname)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Position)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DateOfEmployment)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Department.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Gender.GenderName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.WorkingSituation.WorkingStatus)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NameSurname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Position)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DateOfEmployment)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Department.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Gender.GenderName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.WorkingSituation.WorkingStatus)
+                            </td>
+                            <td>
+                                <span class="label label-success">   <i class="fa fa-pencil"></i> @Html.ActionLink("Düzenle", "Edit", new { id = item.EmployeeId }, new { @style = "color:white" }) </span> &nbsp;&nbsp;
+                                <span class="label label-danger">    <i class="fa fa-trash-o"></i> @Html.ActionLink("Sil", "Delete", new { id = item.EmployeeId }, new { @style = "color:white" }) </span>
+</td>
+                        </tr>
+                    }
+
+                </table>
+
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-3 col-lg-2">
+            <div class="panel">
+                <div class="panel-body">
+@using (Html.BeginForm())
+{
+     @Html.TextBox("aranacakKelime")
+
+                <div class="mb20"></div>
+                        <input type="submit" class="btn btn-primary btn-sm " value="Filtrele" />
+                        <input type="reset" class="btn btn-danger btn-sm " value="Sıfırla" />
+}
+                </div><!-- panel-body -->
+            </div><!-- panel -->
+        </div>
+
+    </div>
+</div>

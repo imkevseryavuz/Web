@@ -1,0 +1,131 @@
+﻿@model _SWCRM.Models.Employee
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_DashboardCrm.cshtml";
+}
+
+
+        <h4>Employee</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.NameSurname)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NameSurname)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Telephone)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Telephone)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DateOfBirth)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Position)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Position)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DateOfEmployment)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DateOfEmployment)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Salary)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Salary)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Password)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Password)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Currency.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Currency.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Gender.GenderName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Gender.GenderName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Situation.Status)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Situation.Status)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.WorkingSituation.WorkingStatus)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.WorkingSituation.WorkingStatus)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Department.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Department.Name)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }

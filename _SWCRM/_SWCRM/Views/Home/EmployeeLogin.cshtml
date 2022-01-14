@@ -1,0 +1,61 @@
+﻿@model _SWCRM.Models.Employee
+@{
+    ViewBag.Title = "SingUp";
+    Layout = "~/Views/Shared/_MainCrm.cshtml";
+}
+
+
+
+
+<section id="pagetitle-container">
+    <div class="row">
+        <div class="twelve column">
+            <h2>Personel Giriş</h2>
+            <h4> Tüm soru, görüş ve talepleriniz için bizimle iletişime geçebilirsiniz. </h4>
+        </div>
+        <div class="twelve column breadcrumb">
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li class="current-page"><a href="iletisim">İletişim	</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- /.baslik -->
+<!-- içerik-->
+<section class="content-wrapper">
+
+
+
+    <div class="row">
+        <div class="col-md-5">
+            @using (Html.BeginForm())
+            {
+
+                <form method="post" action="index.html">
+                    <h4 class="nomargin">Giriş Yap</h4>
+                    <p class="mt5 mb20"> Hesabınıza erişmek için giriş yapınız.</p>
+                    <div class="editor-label">
+                        <p> Kullanıcı Adı</p>
+                    </div>
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control uname" })<br />
+                    @Html.ValidationMessageFor(m => m.UserName)
+
+                    <div class="editor-label">
+                        <p> Şifre</p>
+                    </div>
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control pword" })<br />
+                    @Html.ValidationMessageFor(m => m.Password)
+
+                    <input type="submit" class="btn btn-success btn-block" value="Giriş Yap" />
+
+
+                </form>
+            }
+        </div><!-- col-sm-5 -->
+
+    </div><!-- row -->
+
+
+
+</section>

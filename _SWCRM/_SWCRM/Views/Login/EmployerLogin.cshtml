@@ -1,0 +1,56 @@
+﻿@model _SWCRM.Models.Employer
+@{
+    ViewBag.Title = "EmployerLogin";
+    Layout = "~/Views/Shared/_LoginCrm.cshtml";
+}
+
+
+<div class="col-md-7">
+
+    <div class="signin-info">
+        <div class="logopanel">
+            <h1><span>[</span> SWCRM <span>]</span></h1>
+        </div><!-- logopanel -->
+
+        <div class="mb20"></div>
+
+        
+        <ul>
+            <li><i class="fa fa-arrow-circle-o-right mr5"></i> Kontak Yönetimi</li>
+            <li><i class="fa fa-arrow-circle-o-right mr5"></i> Teklif Yönetimi</li>
+            <li><i class="fa fa-arrow-circle-o-right mr5"></i> Ürün - Marka - Kategori Yönetimi</li>
+            <li><i class="fa fa-arrow-circle-o-right mr5"></i> Satış Yönetimi</li>
+            <li><i class="fa fa-arrow-circle-o-right mr5"></i> Personel Yönetimi</li>
+        </ul>
+        <div class="mb20"></div>
+    </div><!-- signin0-info -->
+
+</div><!-- col-sm-7 -->
+
+<div class="col-md-5">
+
+    @using (Html.BeginForm())
+    {
+
+        <form method="post" action="index.html">
+            <h2><strong>Yönetici Giriş Ekranı</strong></h2>
+            <div class="mb20"></div>
+            <div class="editor-label">
+                <p> Kullanıcı Adı</p>
+
+            </div>
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control uname" })<br />
+            @Html.ValidationMessageFor(m => m.UserName)
+
+            <div class="editor-label">
+                <p> Şifre</p>
+            </div>
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control pword" })<br />
+            @Html.ValidationMessageFor(m => m.Password)
+
+            <input type="submit" class="btn btn-success btn-block" value="Giriş Yap" />
+
+
+        </form>
+    }
+</div><!-- col-sm-5 -->

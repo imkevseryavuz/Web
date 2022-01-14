@@ -1,0 +1,83 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="~/Content/images/favicon.png" type="image/png">
+    <title>SWCRM</title>
+    <link href="~/Content/css/style.default.css" rel="stylesheet">
+    <link href="~/Content/css/jquery.datatables.css" rel="stylesheet">
+    <link href="~/Content/css/fullcalendar.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
+    </div>
+    <section>
+
+        <div class="leftpanel">
+
+            <div class="leftpanelinner">
+
+                <h5 class="sidebartitle" style="font-weight:bold;">SWCRM</h5>
+                <ul class="nav nav-pills nav-stacked nav-bracket">
+                    <li><a href="/Dashboard/Index/"><i class="fa fa-home fa-5x pull-left"></i> Anasayfa  </a></li>
+                    <li><a href="/Contacts/Index/"><i class="fa fa-briefcase fa-5x pull-left"></i> Kontaklar </a></li>
+                    <li><a href="/Deals/Index/"><i class="fa fa-list-alt fa-5x pull-left"></i> Teklifler </a></li>
+                    <li><a href="/Sales/Index/"><i class="fa fa-money fa-5x pull-left"></i> Satışlar </a></li>
+                    <li class="nav-parent">
+                        <a href=""> <span> <i class="fa fa-shopping-cart fa-5x pull-left"></i> Ürünler</span></a>
+                        <ul class="children">
+                            <li><a href="/Products/Index/"><i class="fa fa-caret-right fa-5x pull-left"></i> Ürünler </a></li>
+                            <li><a href="/Categories/Index/"><i class="fa fa-caret-right fa-5x pull-left"></i> Kategoriler </a></li>
+                            <li><a href="/Brands/Index/"><i class="fa fa-caret-right fa-5x pull-left"></i> Markalar </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/Employees/Index/"><i class="fa fa-male fa-5x pull-left"></i>  Personeller </a></li>
+                </ul>
+
+            </div>
+        </div><!-- leftpanel -->
+
+        <div class="mainpanel">
+
+            <div class="headerbar">
+
+                <a class="menutoggle"><i class="fa fa-bars"></i></a>
+
+
+            </div><!-- headerbar -->
+
+            @RenderBody()
+
+        </div><!-- mainpanel -->
+
+    </section>
+
+    <script src="~/Content/js/jquery-1.10.2.min.js"></script>
+    <script src="~/Content/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/js/modernizr.min.js"></script>
+    <script src="~/Content/js/jquery.sparkline.min.js"></script>
+    <script src="~/Content/js/toggles.min.js"></script>
+    <script src="~/Content/js/retina.min.js"></script>
+    <script src="~/Content/js/jquery.cookies.js"></script>
+    <script src="~/Content/js/flot/flot.min.js"></script>
+    <script src="~/Content/js/flot/flot.resize.min.js"></script>
+    <script src="~/Content/js/morris.min.js"></script>
+    <script src="~/Content/js/raphael-2.1.0.min.js"></script>
+    <script src="~/Content/js/jquery.datatables.min.js"></script>
+    <script src="~/Content/js/chosen.jquery.min.js"></script>
+    <script src="~/Content/js/custom.js"></script>
+    <script src="~/Content/js/dashboard.js"></script>
+</body>
+</html>
+
